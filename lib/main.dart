@@ -8,10 +8,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Dr. Stone Character',
       theme: ThemeData(
         // This is the theme of your application.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: MyHomePage(),
     );
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Flutter UI Layouts Home Page'),
+          title: Text('Dr. Stone Characters'),
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
@@ -59,10 +59,15 @@ class _MyHomePageState extends State<MyHomePage> {
               // The ratio between the width and height of items
               childAspectRatio: 0.75,
               // List of items widgets
-              children: items.map<Widget>((Item item) => _ItemGridCellWidget(item)).toList(),
+              children: items
+                  .map<Widget>((Item item) => _ItemGridCellWidget(item))
+                  .toList(),
             ),
             // ListView tab content Widget
-            ListView.builder(itemCount: items.length, itemBuilder: (BuildContext context, int position) => _ItemListCellWidget(items[position]))
+            ListView.builder(
+                itemCount: items.length,
+                itemBuilder: (BuildContext context, int position) =>
+                    _ItemListCellWidget(items[position]))
           ],
         ),
       ),
@@ -175,38 +180,33 @@ class _ItemFullScreenWidget extends StatelessWidget {
 
 List<Item> items = [
   Item(
-    "https://i.pinimg.com/originals/df/0a/3e/df0a3e2ec30abb1c92d145ef165b714f.gif",
-    "Nature 1",
-    """Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""",
+    "https://cdn.myanimelist.net/images/characters/3/388506.jpg",
+    "Senku Ishigami",
+    """ is the main protagonist of Dr. Stone, and is friends with Taiju Oki and Yuzuriha Ogawa. He is known for his catchphrases, one of which is "Ten Billion Percent".[13] He was de-petrified half a year before Taiju was, and eventually created the Revival Fluid with Taiju's help.[14] In the Stone World, Senku wants to rebuild civilization and establish a Kingdom of Science.""",
   ),
   Item(
-    "https://i.pinimg.com/originals/40/c3/be/40c3bef82a8077e5c872808eefff5c6d.png",
-    "Nature 2",
-    "Description",
+    "https://cdn.myanimelist.net/images/characters/3/480836.jpg",
+    "Taiju Ooki",
+    "is a friend of Senku and has a crush on Yuzuriha. Taiju has a strong and sturdy body and helps Senku with hunting and carrying heavy items. He is very enthusiastic even about little tasks and is seen screaming a lot. Taiju doesn't like to fight, so he only blocks his opponent's attacks.Just before the world turned to stone he was about to confess his feelings to Yuzuhira after 5 years because he couldn't get himself to do so before. As he was turned to stone, he survived on his determination to never give up since he failed to tell her how he feels.",
   ),
   Item(
-    "https://image.freepik.com/free-vector/flat-design-baby-shark-cartoon-style_52683-36255.jpg",
-    "Nature 3",
-    "Description",
+    "https://cdn.myanimelist.net/images/characters/12/398561.jpg",
+    "Gen Asagiri ",
+    "Before the petrification occured Gen Asagiri was a popular Mentalist who was featured in many magazines, Tsukasa thought he would be a useful pawn in his army and revived him.",
   ),
   Item(
-    "https://image.freepik.com/free-vector/fairytale-concept-with-child-reading_23-2148472951.jpg",
-    "Sensetpier",
-    "Description",
+    "https://cdn.myanimelist.net/images/characters/7/444639.jpg",
+    "Chrome",
+    "A descendant of the modern humans who seems to have broad knowledge about science.",
   ),
   Item(
-    "https://img.freepik.com/free-vector/spring-landscape-scene_23-2148860692.jpg",
-    "Nature 5",
-    "Description",
+    "https://cdn.myanimelist.net/images/characters/5/385325.jpg",
+    "Kohaku",
+    "A young girl and a descendant of the modern humans. She is very fast and agile, and also her strength and endurance are remarkable, being able to carry a heavy pot filled with hot water on a daily basis. Because of that, she is called Gorilla by Chrome",
   ),
   Item(
-    "https://pw.artfile.me/wallpaper/20-03-2017/650x366/vektornaya-grafika-priroda--nature-sneg--1143282.jpg",
-    "Night Nature",
-    "Description",
+    "https://cdn.myanimelist.net/images/characters/6/385096.jpg",
+    "Tsukasa Shishiou",
+    "He is the antagonist of the first season and he is known as The Strongest High School Primate.",
   ),
 ];
